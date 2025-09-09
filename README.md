@@ -37,7 +37,7 @@ Our architecture consists of four main layers:
  **Diagram:**  
 ![System Architecture](docs/architecture.png)  
 
- ** Diagram Link:** [View on miro ](https://miro.com/app/board/uXjVJLVGmFo=/)
+ **Diagram Link:** [View on miro ](https://miro.com/app/board/uXjVJLVGmFo=/)
 
 ---
 

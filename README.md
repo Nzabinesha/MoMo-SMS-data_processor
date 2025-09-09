@@ -37,7 +37,7 @@ Our architecture consists of four main layers:
  **Diagram:**  
 ![System Architecture](docs/architecture.png)  
 
- ** Diagram Link:** [View on ](https://diagram-link.com)  need to be updated!!!!
+ ** Diagram Link:** [View on miro ](https://miro.com/app/board/uXjVJLVGmFo=/)
 
 ---
 
@@ -55,7 +55,7 @@ We are following **Scrum practices** to manage our development process.
 
 ##  Repository Structure (Week 1 Draft)
 ```bash
-momo-sms-analytics/
+MoMo-SMS-data_processor/
 │── docs/                # Documentation (architecture, design files, etc.)
 │── backend/             # Backend source code (to be added)
 │── frontend/            # Frontend source code (to be added)

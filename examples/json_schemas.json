@@ -1,0 +1,73 @@
+{
+  "Users": {
+    "PhoneNumber": "+250788123456",
+    "Name": "Alice Uwase",
+    "Type": "personal"
+  },
+  "Transaction_Categories": {
+    "CategoryID": "CAT01",
+    "CategoryName": "Bill Payment"
+  },
+  "Transactions": {
+    "TransactionID": "TXN001",
+    "Date": "2025-09-15 14:30:00",
+    "Amount": 5000.50,
+    "SenderPhoneNumber": "+250788123456",
+    "ReceiverPhoneNumber": "+250782654321",
+    "CategoryID": "CAT01",
+    "Status": "completed"
+  },
+  "System_Logs": {
+    "LogID": "LOG001",
+    "Date": "2025-09-15 14:31:00",
+    "TransactionID": "TXN001",
+    "EventDescription": "Transaction processed successfully",
+    "ErrorDetails": null
+  },
+  "Tags": {
+    "TagID": "TAG01",
+    "TagName": "urgent"
+  },
+  "Transaction_Tags": {
+    "TransactionID": "TXN001",
+    "TagID": "TAG01"
+  },
+  "Full_Transaction": {
+    "TransactionID": "TXN001",
+    "Date": "2025-09-15 14:30:00",
+    "Amount": 5000.50,
+    "Status": "completed",
+    "Sender": {
+      "PhoneNumber": "+250788123456",
+      "Name": "Alice Uwase",
+      "Type": "personal"
+    },
+    "Receiver": {
+      "PhoneNumber": "+250782654321",
+      "Name": "Eric Mugisha",
+      "Type": "business"
+    },
+    "Category": {
+      "CategoryID": "CAT01",
+      "CategoryName": "Bill Payment"
+    },
+    "Tags": [
+      {
+        "TagID": "TAG01",
+        "TagName": "urgent"
+      },
+      {
+        "TagID": "TAG02",
+        "TagName": "bonus"
+      }
+    ],
+    "Logs": [
+      {
+        "LogID": "LOG001",
+        "Date": "2025-09-15 14:31:00",
+        "EventDescription": "Transaction processed successfully",
+        "ErrorDetails": null
+      }
+    ]
+  }
+}

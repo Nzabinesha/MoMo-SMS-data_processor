@@ -61,3 +61,13 @@ MoMo-SMS-data_processor/
 │── frontend/            # Frontend source code (to be added)
 │── .gitignore
 │── README.md
+
+## JSON to Database Mapping
+
+| SQL Table              | JSON Field / Object       | Notes |
+|------------------------|--------------------------|-------|
+| Users                  | Sender, Receiver         | Nested in Full_Transaction |
+| Transactions           | TransactionID, Amount, Status, Date | Top-level fields in Full_Transaction |
+| Transaction_Categories | Category                 | Nested object in Full_Transaction |
+| Tags                   | Tags array               | Many-to-many relation |
+| System_Logs            | Logs array               | Linked via TransactionID |

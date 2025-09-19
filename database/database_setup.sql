@@ -27,13 +27,15 @@ CREATE TABLE Transactions (
 	ReceiverUserId VARCHAR(50),
 	CategoryID VARCHAR(50),
 	Status VARCHAR(50),
-	FOREIGN KEY (SenderUserId) REFERENCES Transaction_Categories(CategoryID),
-	FOREIGN KEY (CategoryID) REFERENCES System_Logs(TransactionId)
+	FOREIGN KEY (SenderUserId) REFERENCES Users(User_id),
+	FOREIGN KEY (ReceiverUserId) REFERENCES Users(User_id),
+	FOREIGN KEY (CategoryID) REFERENCES Transaction_Categories(CategoryID)
+
 );
 
 CREATE TABLE Transaction_Tags (
-	TransactionID VARCHAR(50) FOREIGN KEY,
-	TagID VARCHAR(50) FOREIGN KEY,
+	TransactionID VARCHAR(50),
+	TagID VARCHAR(50),
 	FOREIGN KEY (TransactionId) REFERENCES Transactions(TransactionID),
 	FOREIGN KEY (TagID) REFERENCES Tags(TagID)
 );
@@ -44,6 +46,7 @@ CREATE TABLE System_Logs (
 	TransactionId VARCHAR(50),
 	Message TEXT,
 	ErrorDetails TEXT,
+	FOREIGN KEY (TransactionId) REFERENCES Transactions(TransactionID)
 );
 
 #Indexes for performance optimisation
@@ -66,7 +69,7 @@ CREATE INDEX logs_timestamp ON System_Logs(Timestamp);
 
 #Insert test data
 
-INSERT INTO Users (User_id, PhoneNumber, Account_Type, Registered_Date, Full_Name) VALUES
+INSERT INTO Users (User_id, PhoneNumber, AccountType, RegisteredDate, Full_Name) VALUES
 ('U001', '250781234567', 'Personal', '2024-01-10 09:30:00', 'Alice Mukamana'),
 ('U002', '250782345678', 'Business', '2024-02-15 14:20:00', 'John Kamali'),
 ('U003', '250783456789', 'Personal', '2024-03-01 08:00:00', 'Grace Niyonsaba'),
@@ -107,8 +110,8 @@ INSERT INTO Transaction_Tags (TransactionID, TagID) VALUES
 
 -- System Logs
 INSERT INTO System_Logs (LogID, Timestamp, TransactionID, Message, ErrorDetails) VALUES
-('L001', '2024-05-01 10:01:00', 'TRX001', 'Transaction completed successfully', NULL),
-('L002', '2024-05-02 12:31:00', 'TRX002', 'Airtime purchase successful', NULL),
-('L003', '2024-05-03 15:46:00', 'TRX003', 'Transaction pending confirmation', NULL),
-('L004', '2024-05-04 09:16:00', 'TRX004', 'Transaction failed due to insufficient funds', 'Balance too low'),
-('L005', '2024-05-05 18:21:00', 'TRX005', 'Bill payment successful', NULL);
+('L001', '2024-05-01 10:01:00', 'Tr001', 'Transaction completed successfully', NULL),
+('L002', '2024-05-02 12:31:00', 'Tr002', 'Airtime purchase successful', NULL),
+('L003', '2024-05-03 15:46:00', 'Tr003', 'Transaction pending confirmation', NULL),
+('L004', '2024-05-04 09:16:00', 'Tr004', 'Transaction failed due to insufficient funds', 'Balance too low'),
+('L005', '2024-05-05 18:21:00', 'Tr005', 'Bill payment successful', NULL);

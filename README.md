@@ -41,7 +41,8 @@ Our architecture consists of four main layers:
 
 ---
 
-##Database Documentation
+## Database Documentation
+You can find the database documentation here.
 [Database Design Document.pdf](https://github.com/user-attachments/files/22433689/Database.Design.Document.pdf)
 
 

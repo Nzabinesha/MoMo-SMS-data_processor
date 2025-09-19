@@ -1,3 +1,5 @@
+#Create Tables
+
 CREATE TABLE Users (
 	User_id VARCHAR(20) PRIMARY KEY,
 	PhoneNumber VARCHAR(20) UNIQUE,
@@ -20,10 +22,10 @@ CREATE TABLE Tags (
 CREATE TABLE Transactions (
 	TransactionID VARCHAR(50) PRIMARY KEY,
 	Date DATETIME,
-	Amount NUMBER,
+	Amount INT,
 	SenderUserId VARCHAR(50),
-	ReceiverUserId VARCHAR(50) FOREIGN KEY,
-	CategoryID VARCHAR(50) FOREIGN KEY,
+	ReceiverUserId VARCHAR(50),
+	CategoryID VARCHAR(50),
 	Status VARCHAR(50),
 	FOREIGN KEY (SenderUserId) REFERENCES Transaction_Categories(CategoryID),
 	FOREIGN KEY (CategoryID) REFERENCES System_Logs(TransactionId)
@@ -44,6 +46,8 @@ CREATE TABLE System_Logs (
 	ErrorDetails TEXT,
 );
 
+#Indexes for performance optimisation
+
 CREATE INDEX users_phone ON Users(PhoneNumber);
 CREATE INDEX category_name ON Transaction_Categories(CategoryName);
 CREATE INDEX tag_name ON Tags(TagName);
@@ -60,7 +64,7 @@ CREATE INDEX tags_tag ON Transaction_Tags(TagID);
 CREATE INDEX logs_transaction ON System_Logs(TransactionID);
 CREATE INDEX logs_timestamp ON System_Logs(Timestamp);
 
-
+#Insert test data
 
 INSERT INTO Users (User_id, PhoneNumber, Account_Type, Registered_Date, Full_Name) VALUES
 ('U001', '250781234567', 'Personal', '2024-01-10 09:30:00', 'Alice Mukamana'),

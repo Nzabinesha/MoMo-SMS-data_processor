@@ -41,6 +41,10 @@ Our architecture consists of four main layers:
 
 ---
 
+##Database Documentation
+[Database Design Document.pdf](https://github.com/user-attachments/files/22433689/Database.Design.Document.pdf)
+
+
 ## Agile Workflow (Scrum Setup)
 We are following **Scrum practices** to manage our development process.  
 

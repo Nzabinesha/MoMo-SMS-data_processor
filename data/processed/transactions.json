@@ -1,38 +1,5 @@
 [
   {
-    "internal_id": 1,
-    "transaction_id": "76662021700",
-    "transaction_type": "receive",
-    "amount": 2000,
-    "fee": null,
-    "balance": 2000,
-    "sender": {
-      "name": "Jane Smith",
-      "phone": "*********013"
-    },
-    "receiver": null,
-    "timestamp": "2024-05-10T14:30:58.724000Z",
-    "raw": "You have received 2000 RWF from Jane Smith (*********013) on your mobile money account at 2024-05-10 16:30:51. Message from sender: . Your new balance:2000 RWF. Financial Transaction Id: 76662021700.",
-    "xml_attrs": {
-      "protocol": "0",
-      "address": "M-Money",
-      "date": "1715351458724",
-      "type": "1",
-      "subject": "null",
-      "body": "You have received 2000 RWF from Jane Smith (*********013) on your mobile money account at 2024-05-10 16:30:51. Message from sender: . Your new balance:2000 RWF. Financial Transaction Id: 76662021700.",
-      "toa": "null",
-      "sc_toa": "null",
-      "service_center": "+250788110381",
-      "read": "1",
-      "status": "-1",
-      "locked": "0",
-      "date_sent": "1715351451000",
-      "sub_id": "6",
-      "readable_date": "10 May 2024 4:30:58 PM",
-      "contact_name": "(Unknown)"
-    }
-  },
-  {
     "internal_id": 2,
     "transaction_id": "73214484437",
     "transaction_type": "payment",
@@ -54131,5 +54098,12 @@
       "readable_date": "16 Jan 2025 12:13:29 AM",
       "contact_name": "(Unknown)"
     }
+  },
+  {
+    "transaction_type": "payment",
+    "amount": 1000,
+    "sender": "Alice",
+    "receiver": "Bob",
+    "internal_id": 1692
   }
 ]

@@ -11,7 +11,7 @@ from pathlib import Path
 from datetime import datetime
 
 # Paths (adjust if needed)
-INPUT_XML = Path("examples/modified_sms_v2.xml")
+INPUT_XML = Path("/examples/modified_sms_v2.xml")
 OUT_JSON = Path("data/processed/transactions.json")
 
 # Regexes tuned for your SMS patterns

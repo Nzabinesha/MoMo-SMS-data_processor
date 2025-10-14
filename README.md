@@ -45,6 +45,9 @@ Our architecture consists of four main layers:
 You can find the database documentation here.
 [Database Design Document.pdf](https://github.com/user-attachments/files/22433689/Database.Design.Document.pdf)
 
+## Project Report
+Final PDF Report: [MoMo SMS Data Processor — Report.pdf](https://github.com/user-attachments/files/22902606/MoMo.SMS.Data.Processor.Report.pdf)
+
 
 ## Agile Workflow (Scrum Setup)
 We are following **Scrum practices** to manage our development process.  
@@ -58,14 +61,41 @@ We are following **Scrum practices** to manage our development process.
  **Scrum Board Link:** [View Board](https://trello.com/b/avGAlbms/momo-sms-dataprocessor)  
 
 
-##  Repository Structure (Week 1 Draft)
+##  Repository Structure 
 ```bash
 MoMo-SMS-data_processor/
-│── docs/                # Documentation (architecture, design files, etc.)
-│── backend/             # Backend source code (to be added)
-│── frontend/            # Frontend source code (to be added)
-│── .gitignore
-│── README.md
+├── api
+│   └── server.py
+├── backend
+├── data
+│   └── processed
+├── database
+│   └── database_setup.sql
+├── docs
+│   ├── api_docs.md
+│   ├── architecture.png
+│   ├── Database Design Document.pdf
+│   ├── Documentation-for_ERD.pdf
+│   └── erd_diagram.png.png
+├── dsa
+│   ├── parse_xml.py
+│   ├── __pycache__
+│   └── search.py
+├── examples
+│   ├── json_schemas.json
+│   └── modified_sms_v2.xml
+├── frontend
+├── README.md
+└── screenshots
+    ├── DELETE - remove a transaction.png
+    ├── GET transactions by ID.png
+    ├── POST - add a new transaction.png
+    ├── PUT - update a transaction.png
+    ├── Screenshot 2025-10-09 183411.png
+    ├── Screenshot 2025-10-09 183453.png
+    ├── Screenshot 2025-10-09 183752.png
+    ├── Screenshot 2025-10-09 183926.png
+    └── Screenshot 2025-10-09 184146.png
 
 ## JSON to Database Mapping
 
